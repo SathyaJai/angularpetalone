@@ -1,0 +1,37 @@
+
+  
+  <div id="tabs" #tabs>
+ <div style="margin: 70px;">
+    <ul class="nav nav-pills"  >
+      <li class="nav-item">
+        <a class="nav-link active" [ngClass]="{ 'active':activeTab==='home'}" (click)="changeTab('home')"
+           data-toggle="tab">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"  [ngClass]="{ 'active':activeTab==='addmissingpets'}" data-toggle="tab"
+           (click)="changeTab('addmissingpets')">Add Missing Pets</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"  [ngClass]="{ 'active':activeTab==='adminaction'}" data-toggle="tab"
+           (click)="changeTab('adminaction')">Admin Action</a>
+      </li>
+    </ul>
+  </div>
+    <div class="tab-content">
+      <div class="tab-pane" id="home" [ngClass]="{ 'active':activeTab==='home'}">
+        
+        <app-petsmissing></app-petsmissing>  
+      </div>
+      <div class="tab-pane" id="missingpets" [ngClass]="{ 'active':activeTab==='addmissingpets'}">
+        <app-aboutpetdetails></app-aboutpetdetails>
+      </div>
+      <div class="tab-pane" id="adminaction" [ngClass]="{ 'active':activeTab==='adminaction'}">
+        
+        <app-role></app-role>
+      </div>
+    </div>
+  
+  </div>   
+  
+  
+  

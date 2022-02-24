@@ -1,0 +1,55 @@
+
+
+<section class="vh-100">
+  <div class="container-fluid h-custom">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+    
+      <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+        <form   *ngIf="!isLoggedIn"
+        name="form"
+        (ngSubmit)="f.form.valid && onSubmit()"
+        #f="ngForm"
+        novalidate>
+         
+            <p class="lead fw-normal mb-0 me-3" >Please Sign in</p>
+
+
+          <!-- Email input -->
+          <div class="form-outline mb-4">
+            <label class="form-label" for="form3Example3">User Name</label>
+            <input type="text" id="username"[(ngModel)]="form.username" class="form-control form-control-lg"
+              placeholder="Enter a valid user name" [ngModelOptions]="{standalone: true}"/>
+            
+          </div>
+
+         
+            <!-- <div
+              class="alert alert-danger"
+              role="alert"
+              *ngIf="username.errors && f.submitted"
+            >
+              Username is required!
+            </div> -->
+          
+          <!-- Password input -->
+          <div class="form-outline mb-3">
+            <label class="form-label" for="form3Example4">Password</label>
+            <input type="password" id="password" [(ngModel)]="form.password" class="form-control form-control-lg"
+              placeholder="Enter password" [ngModelOptions]="{standalone: true}" />
+          
+          </div>
+
+         
+
+         
+          <div class="form-group">
+            <button class="btn btn-primary btn-block">
+              Login
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</section>

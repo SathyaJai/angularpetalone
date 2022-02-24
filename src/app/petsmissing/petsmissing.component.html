@@ -1,0 +1,79 @@
+
+<h5 style=" text-align: center;">Missing Pets</h5>
+<div class="col-lg-lg col-md-12 col-sm-12 col-xs-12 pad0 "  >
+    
+    <div class="row row-cols-3">
+<div *ngFor="let pet of pets trackBy: trackPet; let i = index ">
+
+
+<div class="  card float-left" style="width: 20rem; margin: 0px 10px 0px 10px ">
+     
+    <img class="card-img-top rounded  column"  src="{{pet.imagePath}}" alt=" pet image "> 
+    <div class="card-body">
+
+     
+      <h5 class="card-title">{{pet.name}}</h5>
+
+
+      <div class="card-text">
+        <span >Missing Since : </span>
+        <span >{{pet.missingSince}}</span>
+      </div>
+      <div class="card-text">
+        <span >Owner : </span>
+        <span >{{pet.petsOwner}}</span>
+      </div>
+    
+    <div class="card-text">
+        <span >ContactNumber : </span>
+        <span >{{pet.petsOwnerContactNumber}}</span>
+       
+    </div>
+    <div class="card-text">
+      <span >Information Provide by User : </span>
+      
+      <div *ngFor="let uinfo of pet.lstUserInfo trackBy: trackPetInfo; let i = index ">
+       
+        <span >{{uinfo.ainfo}}</span>    
+      </div>
+
+
+    </div>
+    <div class="card-text">
+    Please do you know about this pets give some 
+    <button class="btn btn-primary" type="button" id="user_info{{i}}"  (click)="toShowUserInfo(i)"> Add Info</button>
+    </div>
+  <div *ngIf="toShow[i]" >
+    <div class="card card-body">
+        
+
+         <div class="card-text">
+            <span >Name : </span>
+            <input type="text" class="form-control font-regular font-15" [(ngModel)]="pet.aname" id="auser_{{i}}"  name="auser"
+         value="" placeholder="">
+          </div>
+
+                    
+         <div class="card-text">
+            <span >Contact No : </span>
+            <input type="text" class="form-control font-regular font-15" [(ngModel)]="pet.acontactnumber" id="contactno_{{i}}"  name="contactno_{{i}}"
+         value="" placeholder="">
+          </div>
+          
+         <div class="card-text">
+            <span >Pet Info : </span>
+            <input type="text" class="form-control font-regular font-15" [(ngModel)]="pet.ainfo" id="petinfo__{{i}}"  name="petinfo__{{i}}"
+         value="" placeholder="">
+          </div>
+
+          <button class="btn btn-primary" type="button" id="userinfo_about_pet_{{i}}" (click)="userInfoAboutPet(i,pet)">Share Info</button> 
+    </div>
+  </div>
+    </div>
+
+  </div>
+  </div>  
+    </div>
+
+
+   
