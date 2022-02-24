@@ -1,7 +1,7 @@
 
   
-  <div id="tabs" #tabs>
- <div style="margin: 70px;">
+  <div class="container-fluid" id="tabs" #tabs>
+ 
     <ul class="nav nav-pills"  >
       <li class="nav-item">
         <a class="nav-link active" [ngClass]="{ 'active':activeTab==='home'}" (click)="changeTab('home')"
@@ -16,7 +16,7 @@
            (click)="changeTab('adminaction')">Admin Action</a>
       </li>
     </ul>
-  </div>
+ 
     <div class="tab-content">
       <div class="tab-pane" id="home" [ngClass]="{ 'active':activeTab==='home'}">
         

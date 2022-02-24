@@ -1,21 +1,20 @@
 
-  
-<section class="vh-100" style="margin: 70px;" >
-    <div class="container-sm">
+  <!--<section class="vh-100" >-->
+    <div class="about-div">
 <form [formGroup]="uploadForm" (ngSubmit)="upload()">
     <p class="lead fw-normal mb-0 me-3"  style="text-align: center;">Please Fill Pets Infomation</p>
     
   
 
-    <div class="form-outline form-group mb-4" >
+    <div class="form-outline form-group  row" >
      
-        <label class="form-label" for="petname"> Pet Name</label>
-        <input class="form-control form-control-lg" id="name" formControlName="name" type="text" placeholder="Enter a valid pet name">
+        <label class="form-label col-lg-3 col-form-label" for="petname"> Pet Name</label>
+        <input class="form-control col-lg-9 col-form-label" id="name" formControlName="name" type="text" placeholder="Enter a valid pet name">
         
     </div>
-    <div class="  form-outline mb-4">
-        <label>Type of Pet</label>
-      <select class="browser-default custom-select mb-4" id ="pettype"
+    <div class="  form-outline form-group  row">
+        <label class="form-label col-lg-3 col-form-label" >Type of Pet</label>
+      <select class="form-control col-lg-9 col-form-label" id ="pettype"
       formControlName="petType"  >
         <option selected disabled value="">Type of Pet</option>
         <option value="1">Dog</option>
@@ -24,42 +23,42 @@
       </select>
         
       </div>
-    <div class="form-outline mb-4" >
+    <div class="form-outline form-group row" >
            
-        <label class="form-label" for="missingData">Missing  Date</label>
-      <input type="Date" id="missingData" formControlName="missingDate" class="form-control form-control-lg"
+        <label class="form-label col-sm-3 col-form-label"  for="missingData">Missing  Date</label>
+      <input type="Date" id="missingData" formControlName="missingDate" class="form-control col-sm-9 col-form-label"
          placeholder="Enter a missing date " />
     
     </div>
 
-    <div class="form-outline mb-4">
-        <label class="form-label" for="petOwner">Pet Owner Name</label>
-            <input type="text" id="petOwner" class="form-control form-control-lg"
+    <div class="form-outline form-group row">
+        <label class="form-label col-sm-3 col-form-label"  for="petOwner">Pet Owner Name</label>
+            <input type="text" id="petOwner" class="form-control col-sm-9 col-form-label"
         placeholder="Enter a pet ower name " formControlName="petsOwner" />
       
       </div>
-      <div class="form-outline mb-4">
-        <label class="form-label" for="petOwneremail">Email</label>
+      <div class="form-outline form-group row">
+        <label class="form-label col-sm-3 col-form-label"  for="petOwneremail">Email</label>
       
-        <input type="email" id="petOwneremail" class="form-control form-control-lg"
+        <input type="email" id="petOwneremail" class="form-control col-sm-9 col-form-label"
         placeholder="Enter a owner contact number " formControlName="email" />
         
       </div>
       
-      <div class="form-outline mb-4">
-        <label class="form-label" for="ownercontactnumber">Owner Contact Number</label>
+      <div class="form-outline form-group row">
+        <label class="form-label col-sm-3 col-form-label"  for="ownercontactnumber">Owner Contact Number</label>
       
-        <input type="number" id="ownercontactnumber" class="form-control form-control-lg"
+        <input type="number" id="ownercontactnumber" class="form-control col-sm-9 col-form-label"
         placeholder="Enter a owner contact number " formControlName="petsOwnerContactNumber" />
         
       </div>
 
-      <div class="form-outline mb-4">
+      <div class="form-outline form-group row">
    
-        <label class="form-label" for="aboutpets">About Pet information</label>
+        <label class="form-label col-sm-3 col-form-label"  for="aboutpets">About Pet information</label>
       
-        <textarea id="aboutpets" rows="2" 
-         class="form-control form-control-lg"
+        <textarea id="aboutpets" form-group rows="2" 
+         class="form-control col-sm-9 col-form-label"
         placeholder="Enter pet Details " formControlName="petinfo" ></textarea>
       
        </div>
@@ -79,5 +78,11 @@
   </form>
 
 </div>
-</section>
+<!--</section>
+-->
 
+<div class="d-flex justify-content-start">...</div>
+<div class="d-flex justify-content-end">...</div>
+<div class="d-flex justify-content-center">...</div>
+<div class="d-flex justify-content-between">...</div>
+<div class="d-flex justify-content-around">...</div>

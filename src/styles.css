@@ -1,5 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
-
+body{  
+  margin-left: 20px;  
+}
+.imgdiv{
+  background-color:#dce0dc;
+}
 a.navbar-brand {
     white-space: normal;
     text-align: center;
@@ -69,3 +74,6 @@ a.navbar-brand {
     line-height: 60px; /* Vertically center the text there */
   }
   
+
+  .fnt-span-head{  font-family:cursive ; color:#c9472a ;font-weight: bold;}
+  .fnt-span-color{font-family:cursive ; color:#3d3b3a ;}
