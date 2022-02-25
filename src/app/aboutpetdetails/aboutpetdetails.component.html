@@ -8,13 +8,13 @@
 
     <div class="form-outline form-group  row" >
      
-        <label class="form-label col-lg-3 col-form-label" for="petname"> Pet Name</label>
-        <input class="form-control col-lg-9 col-form-label" id="name" formControlName="name" type="text" placeholder="Enter a valid pet name">
+        <label class="form-label col-lg-2 col-form-label" for="petname"> Pet Name</label>
+        <input class="form-control col-lg-6 col-form-label" id="name" formControlName="name" type="text" placeholder="Enter a valid pet name">
         
     </div>
     <div class="  form-outline form-group  row">
-        <label class="form-label col-lg-3 col-form-label" >Type of Pet</label>
-      <select class="form-control col-lg-9 col-form-label" id ="pettype"
+        <label class="form-label col-lg-2 col-form-label" >Type of Pet</label>
+      <select class="form-control col-lg-6 col-form-label" id ="pettype"
       formControlName="petType"  >
         <option selected disabled value="">Type of Pet</option>
         <option value="1">Dog</option>
@@ -25,40 +25,40 @@
       </div>
     <div class="form-outline form-group row" >
            
-        <label class="form-label col-sm-3 col-form-label"  for="missingData">Missing  Date</label>
-      <input type="Date" id="missingData" formControlName="missingDate" class="form-control col-sm-9 col-form-label"
+        <label class="form-label col-lg-2 col-form-label"  for="missingData">Missing  Date</label>
+      <input type="Date" id="missingData" formControlName="missingDate" class="form-control col-lg-6 col-form-label"
          placeholder="Enter a missing date " />
     
     </div>
 
     <div class="form-outline form-group row">
-        <label class="form-label col-sm-3 col-form-label"  for="petOwner">Pet Owner Name</label>
-            <input type="text" id="petOwner" class="form-control col-sm-9 col-form-label"
+        <label class="form-label col-lg-2 col-form-label"  for="petOwner">Pet Owner Name</label>
+            <input type="text" id="petOwner" class="form-control col-lg-6 col-form-label"
         placeholder="Enter a pet ower name " formControlName="petsOwner" />
       
       </div>
       <div class="form-outline form-group row">
-        <label class="form-label col-sm-3 col-form-label"  for="petOwneremail">Email</label>
+        <label class="form-label col-lg-2 col-form-label"  for="petOwneremail">Email</label>
       
-        <input type="email" id="petOwneremail" class="form-control col-sm-9 col-form-label"
+        <input type="email" id="petOwneremail" class="form-control col-lg-6 col-form-label"
         placeholder="Enter a owner contact number " formControlName="email" />
         
       </div>
       
       <div class="form-outline form-group row">
-        <label class="form-label col-sm-3 col-form-label"  for="ownercontactnumber">Owner Contact Number</label>
+        <label class="form-label col-lg-2 col-form-label"  for="ownercontactnumber">Owner Contact Number</label>
       
-        <input type="number" id="ownercontactnumber" class="form-control col-sm-9 col-form-label"
+        <input type="number" id="ownercontactnumber" class="form-control col-lg-6 col-form-label"
         placeholder="Enter a owner contact number " formControlName="petsOwnerContactNumber" />
         
       </div>
 
       <div class="form-outline form-group row">
    
-        <label class="form-label col-sm-3 col-form-label"  for="aboutpets">About Pet information</label>
+        <label class="form-label col-lg-2 col-form-label"  for="aboutpets">About Pet information</label>
       
         <textarea id="aboutpets" form-group rows="2" 
-         class="form-control col-sm-9 col-form-label"
+         class="form-control col-lg-6 col-form-label"
         placeholder="Enter pet Details " formControlName="petinfo" ></textarea>
       
        </div>
@@ -66,15 +66,15 @@
         <img [src]="imgFile" style="width:400px; height:250px">
       </div>
         
-    <div class="form-group">
-      <label for="file">File</label>
-      <input type="file" class="form-control" id="file" formControlName="file" (change)="onImageChange($event)">
+    <div class="form-group  form-group row">
+      <label class="form-label col-lg-2 col-form-label" for="file">File</label>
+      <input type="file" class="form-control col-lg-6 col-form-label" id="file" formControlName="file" (change)="onImageChange($event)">
      
      
     </div>
-  
-    <button class="btn btn-success" type="submit">  Upload Missing Pet Details </button>
-  
+    <div class="form-group  form-group row">
+    <button class="btn btn-success col-lg-2" style="text-align: center;" type="submit">  Upload Missing Pet Details </button>
+  </div>
   </form>
 
 </div>

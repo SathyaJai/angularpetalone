@@ -85,10 +85,8 @@ a.navbar-brand {
       padding: 10px;
     }
 
-    .cardsss {
+    
 
-      vertical-align: top;
-      
-      margin-right:1em;
-      
+      .border-class{
+        border: 2px;
       }
