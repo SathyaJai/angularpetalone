@@ -56,6 +56,7 @@ public password:any;
   
     let subscription = this.authService.login(username, password).subscribe(
       data => {
+        
         this.tokenStorage.saveToken(data.token);
         this.tokenStorage.saveUser(username);
         this.isLoginFailed = false;
@@ -70,6 +71,7 @@ public password:any;
         this.errorMessage = err.error.message;
         this.isLoginFailed = true;
         this.tokenStorage.storeLoginStatus("false");
+        this.authService.isLoggedIn = false;
       }
     );
   }

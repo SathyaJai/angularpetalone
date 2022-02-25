@@ -19,7 +19,8 @@ import { AdminService} from './service/adminService.service';
 import  {authInterceptorProviders} from './interceptor/auth.interceptor';
 import { AboutpetdetailsComponent } from './aboutpetdetails/aboutpetdetails.component';
 import { AboutpetComponent } from './aboutpet/aboutpet.component';
-import { RoleComponent } from './role/role.component'
+import { RoleComponent } from './role/role.component';
+import { AuthGuard} from "./service/auth.guard"
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +41,7 @@ import { RoleComponent } from './role/role.component'
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [PetsaloneService,AdminService,authInterceptorProviders],
+  providers: [PetsaloneService,AdminService,authInterceptorProviders,AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
