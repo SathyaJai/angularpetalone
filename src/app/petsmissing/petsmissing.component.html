@@ -1,15 +1,17 @@
 
+
+
 <h5 style=" text-align: center;">Missing Pets</h5>
-<div class="col-lg-l2 col-md-12 col-sm-12 col-xs-12  "  >
+
     
-    <div class="row row-cols-3">
+ <div class="row row-cols-3">
 <div *ngFor="let pet of pets trackBy: trackPet; let i = index ">
 
 
-<div class="  card float-left" style="width: 18rem; ">
+<div class="  card float-left " style="width: 18rem; ">
      
     <img class="card-img-top rounded  column"  src="{{pet.imagePath}}" alt=" pet image "> 
-    <div class="card-body">
+    <div class="card-body ">
 
      
       <h5 class="fnt-span-head"  >{{pet.name}}</h5>

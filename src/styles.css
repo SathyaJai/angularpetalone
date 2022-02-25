@@ -77,3 +77,18 @@ a.navbar-brand {
 
   .fnt-span-head{  font-family:cursive ; color:#c9472a ;font-weight: bold;}
   .fnt-span-color{font-family:cursive ; color:#3d3b3a ;}
+  
+    .content {
+      max-width: 90%;
+      margin: auto;
+      background: white;
+      padding: 10px;
+    }
+
+    .cardsss {
+
+      vertical-align: top;
+      
+      margin-right:1em;
+      
+      }
